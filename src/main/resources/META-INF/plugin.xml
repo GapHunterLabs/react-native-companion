@@ -1,0 +1,22 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>dev.gaphunter.reactnativecompanion</id>
+    <name>React Native Companion</name>
+    <vendor>Gap Hunter Labs</vendor>
+    <description><![CDATA[
+        <p>Run React Native commands (<code>run-android</code>, <code>run-ios</code>, Metro) from a tool
+        window without freezing the IDE. Built on <code>OSProcessHandler</code>, IntelliJ's own
+        asynchronous process API, specifically because the leading paid alternative has repeated,
+        recent reports of freezing the IDE and requiring thread dumps to recover.</p>
+        <p>Includes an Android/iOS device and simulator picker parsed directly from real
+        <code>adb devices</code> / <code>xcrun simctl list devices</code> output.</p>
+        <p>One-click release bundling and multi-environment profiles are coming in a future release.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="React Native" secondary="true" anchor="bottom"
+                    factoryClass="dev.gaphunter.reactnativecompanion.ui.ReactNativeToolWindowFactory"/>
+    </extensions>
+</idea-plugin>
