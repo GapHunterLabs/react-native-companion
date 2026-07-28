@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [0.1.1]
+
+### Added
+
+- Gap Hunter Labs brand icon (`pluginIcon.svg` / `pluginIcon_dark.svg`).
+
 ## [0.1.0]
 
 ### Added
@@ -15,7 +21,6 @@
 - Android/iOS device and simulator picker, parsed directly from real
   `adb devices` / `xcrun simctl list devices` output.
 
-### On hold for 0.2.0
-
-One-click release bundling (`gradlew bundleRelease`/`assembleRelease`),
-multi-environment variable profiles.
+[Unreleased]: https://github.com/kendjm/react-native-companion/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/kendjm/react-native-companion/compare/0.1.0...0.1.1
+[0.1.0]: https://github.com/kendjm/react-native-companion/commits/0.1.0
