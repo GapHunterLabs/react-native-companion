@@ -4,6 +4,21 @@
 
 ## [Unreleased]
 
+## [0.2.0]
+
+### Added
+
+- One-click release bundling: "Build Android Release" runs
+  `react-native build-android --mode=release`, "Build iOS Release" runs
+  `react-native build-ios --mode=Release` — the real react-native CLI
+  bundling commands, same `OSProcessHandler` execution path as
+  run-android/run-ios/start.
+- Multi-environment variable profiles: an "Environment" dropdown
+  auto-discovers `.env*` files at the project root (the real
+  `react-native-config` convention) and sets `ENVFILE` for every
+  command run from the tool window when a profile other than "(none)"
+  is selected.
+
 ## [0.1.2]
 
 ### Changed
@@ -30,7 +45,8 @@
 - Android/iOS device and simulator picker, parsed directly from real
   `adb devices` / `xcrun simctl list devices` output.
 
-[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.1.2...HEAD
+[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/GapHunterLabs/react-native-companion/compare/0.1.2...0.2.0
 [0.1.2]: https://github.com/GapHunterLabs/react-native-companion/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/GapHunterLabs/react-native-companion/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/GapHunterLabs/react-native-companion/commits/0.1.0

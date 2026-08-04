@@ -18,11 +18,19 @@ import java.io.File
  */
 object ReactNativeCommandRunner {
 
-    fun run(workDirectory: String, args: List<String>, console: ConsoleView): OSProcessHandler {
-        val commandLine = GeneralCommandLine(npxExecutable())
+    /**
+     * [envFile], when non-null, is set as the ENVFILE environment
+     * variable before spawning -- the real mechanism react-native-config
+     * reads to pick a `.env.<profile>` file, not a plugin-invented one.
+     */
+    fun run(workDirectory: String, args: List<String>, console: ConsoleView, envFile: String? = null): OSProcessHandler {
+        var commandLine = GeneralCommandLine(npxExecutable())
             .withParameters(listOf("react-native") + args)
             .withWorkDirectory(File(workDirectory))
             .withCharset(Charsets.UTF_8)
+        if (envFile != null) {
+            commandLine = commandLine.withEnvironment("ENVFILE", envFile)
+        }
 
         val processHandler = OSProcessHandler(commandLine)
         console.attachToProcess(processHandler)
