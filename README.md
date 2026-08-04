@@ -38,6 +38,11 @@ from the dropdown after **Refresh Devices**.
 One-click release bundling and multi-environment variable profiles
 aren't built yet.
 
+## Enterprise / Team Licensing
+
+Need enterprise features, custom build/run configurations, or team
+licensing? Contact us at **kennyj.diazm@gmail.com**.
+
 ## Development
 
 ```
