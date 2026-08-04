@@ -33,10 +33,16 @@ Open the **React Native** tool window (bottom of the IDE) → **Run
 Android** / **Run iOS** / **Start Metro**, or pick a specific device
 from the dropdown after **Refresh Devices**.
 
-## What's next
+**Release bundling:** **Build Android Release** / **Build iOS Release**
+run the real `react-native build-android --mode=release` /
+`build-ios --mode=Release` CLI commands, same non-blocking execution
+path as the run commands above.
 
-One-click release bundling and multi-environment variable profiles
-aren't built yet.
+**Environment profiles:** the **Environment** dropdown auto-discovers
+`.env*` files at the project root (the convention
+`react-native-config` reads) — pick one and every command run from the
+tool window sets `ENVFILE` accordingly. Select **(none)** to run
+without an override.
 
 ## Enterprise / Team Licensing
 
