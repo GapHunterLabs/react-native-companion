@@ -47,7 +47,7 @@ without an override.
 ## Enterprise / Team Licensing
 
 Need enterprise features, custom build/run configurations, or team
-licensing? Contact us at **kennyj.diazm@gmail.com**.
+licensing? Contact us at **gaphunterlabs@gmail.com**.
 
 ## Development
 
