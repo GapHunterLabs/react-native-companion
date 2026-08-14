@@ -6,6 +6,7 @@ import com.intellij.openapi.Disposable
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.Disposer
+import com.intellij.util.ui.JBUI
 import dev.gaphunter.reactnativecompanion.runner.DeviceOutputParser
 import dev.gaphunter.reactnativecompanion.runner.EnvProfileDiscovery
 import dev.gaphunter.reactnativecompanion.runner.ReactNativeCommandRunner
@@ -37,6 +38,7 @@ class ReactNativeConsolePanel(private val project: Project) : JPanel(BorderLayou
     private val envCombo = JComboBox(envModel)
 
     init {
+        border = JBUI.Borders.empty(8)
         Disposer.register(this, console)
 
         val runToolbar = JPanel(FlowLayout(FlowLayout.LEFT))
