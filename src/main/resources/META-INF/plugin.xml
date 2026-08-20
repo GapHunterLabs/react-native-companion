@@ -17,6 +17,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="React Native" secondary="true" anchor="bottom"
+                    icon="/icons/toolWindow.svg"
                     factoryClass="dev.gaphunter.reactnativecompanion.ui.ReactNativeToolWindowFactory"/>
     </extensions>
 </idea-plugin>
