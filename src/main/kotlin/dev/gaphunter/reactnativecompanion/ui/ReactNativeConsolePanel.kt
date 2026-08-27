@@ -7,6 +7,7 @@ import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.Disposer
 import com.intellij.util.ui.JBUI
+import dev.gaphunter.reactnativecompanion.review.ReviewPrompt
 import dev.gaphunter.reactnativecompanion.runner.DeviceOutputParser
 import dev.gaphunter.reactnativecompanion.runner.EnvProfileDiscovery
 import dev.gaphunter.reactnativecompanion.runner.ReactNativeCommandRunner
@@ -75,6 +76,9 @@ class ReactNativeConsolePanel(private val project: Project) : JPanel(BorderLayou
         val selectedEnv = envCombo.selectedItem as? String
         val envFile = if (selectedEnv == null || selectedEnv == NO_ENV_PROFILE) null else selectedEnv
         ReactNativeCommandRunner.run(workDirectory, args, console, envFile)
+        // A real command was actually launched -- never fires for "no
+        // project directory" above, which returns before reaching here.
+        ReviewPrompt.recordHit(project)
     }
 
     private fun refreshEnvProfiles() {

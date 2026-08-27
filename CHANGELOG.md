@@ -4,6 +4,15 @@
 
 ## [Unreleased]
 
+## [0.2.3]
+
+### Added
+
+- Review/star CTA: after 5 commands launched from the tool window (Run
+  Android/iOS, Start Metro, Build releases), a one-time notification
+  asks whether to rate the plugin on Marketplace, with a permanent
+  "Don't ask again" option.
+
 ## [0.2.2]
 
 ### Fixed
@@ -61,7 +70,9 @@
 - Android/iOS device and simulator picker, parsed directly from real
   `adb devices` / `xcrun simctl list devices` output.
 
-[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.1...HEAD
+[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.3...HEAD
+[0.2.3]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.2...0.2.3
+[0.2.2]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.1...0.2.2
 [0.2.1]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/GapHunterLabs/react-native-companion/compare/0.1.2...0.2.0
 [0.1.2]: https://github.com/GapHunterLabs/react-native-companion/compare/0.1.1...0.1.2
