@@ -19,13 +19,16 @@ import java.io.File
 object ReactNativeCommandRunner {
 
     /**
-     * [envFile], when non-null, is set as the ENVFILE environment
-     * variable before spawning -- the real mechanism react-native-config
-     * reads to pick a `.env.<profile>` file, not a plugin-invented one.
+     * Runs `npx <npxArgs>` (see [CommandPlan]). [envFile], when non-null,
+     * is set as the ENVFILE environment variable before spawning -- the
+     * real mechanism react-native-config reads to pick a
+     * `.env.<profile>` file, not a plugin-invented one. Arguments are
+     * passed as a list, never through a shell, so a simulator name with
+     * spaces arrives intact.
      */
-    fun run(workDirectory: String, args: List<String>, console: ConsoleView, envFile: String? = null): OSProcessHandler {
+    fun run(workDirectory: String, npxArgs: List<String>, console: ConsoleView, envFile: String? = null): OSProcessHandler {
         var commandLine = GeneralCommandLine(npxExecutable())
-            .withParameters(listOf("react-native") + args)
+            .withParameters(npxArgs)
             .withWorkDirectory(File(workDirectory))
             .withCharset(Charsets.UTF_8)
         if (envFile != null) {
