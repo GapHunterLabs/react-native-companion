@@ -4,6 +4,35 @@
 
 ## [Unreleased]
 
+## [0.3.0]
+
+### Added
+
+- Expo support. The toolchain is detected from `package.json`: in an Expo
+  project the same buttons run `expo run:android` / `expo run:ios` /
+  `expo start`, and the release buttons run the local release builds
+  `expo run:android --variant release` / `expo run:ios --configuration
+  Release` (no EAS account involved). React Native CLI projects behave as
+  before. The detected toolchain is shown in the tool window.
+
+### Fixed
+
+- The device picker didn't do anything: the device selected in the
+  dropdown was never passed to the run command, so the app always started
+  on the default device. It now goes to `run-android --deviceId <serial>` /
+  `run-ios --udid <udid>` (or `--device <id>` for Expo), and only to the
+  command for its own platform.
+- The plugin description still said release bundling and environment
+  profiles were "coming in a future release"; both shipped in 0.2.0. The
+  description now lists what the plugin does.
+
+### Changed
+
+- "Start Metro" is now "Start Dev Server" (it starts `expo start` in an
+  Expo project), and the separate "Refresh Devices" / "Refresh
+  Environments" buttons are a single "Refresh" that also re-detects the
+  toolchain.
+
 ## [0.2.3]
 
 ### Added
@@ -70,7 +99,8 @@
 - Android/iOS device and simulator picker, parsed directly from real
   `adb devices` / `xcrun simctl list devices` output.
 
-[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.3...HEAD
+[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.3.0...HEAD
+[0.3.0]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.3...0.3.0
 [0.2.3]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.2...0.2.3
 [0.2.2]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.1...0.2.2
 [0.2.1]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.0...0.2.1
