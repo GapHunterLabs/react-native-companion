@@ -4,6 +4,13 @@
 
 ## [Unreleased]
 
+## [0.3.1]
+
+### Fixed
+
+- Review/star CTA now links to this plugin's own Marketplace
+  reviews page instead of the vendor's generic plugin list.
+
 ## [0.3.0]
 
 ### Added
@@ -99,7 +106,8 @@
 - Android/iOS device and simulator picker, parsed directly from real
   `adb devices` / `xcrun simctl list devices` output.
 
-[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.3.0...HEAD
+[Unreleased]: https://github.com/GapHunterLabs/react-native-companion/compare/0.3.1...HEAD
+[0.3.1]: https://github.com/GapHunterLabs/react-native-companion/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.3...0.3.0
 [0.2.3]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.2...0.2.3
 [0.2.2]: https://github.com/GapHunterLabs/react-native-companion/compare/0.2.1...0.2.2
