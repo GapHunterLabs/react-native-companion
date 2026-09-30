@@ -4,6 +4,12 @@ IntelliJ/WebStorm/PhpStorm plugin. Run React Native and Expo apps (run on
 Android/iOS, dev server, release builds) from a tool window without
 freezing the IDE.
 
+![React Native Companion: Run React Native and Expo apps from a tool window, without freezing the IDE](docs/media/hero.gif)
+
+Each feature on its own:
+[Start the dev server](docs/media/01-dev-server.gif) ·
+[No IDE freeze](docs/media/02-keeps-editing.gif)
+
 ## Why it exists
 
 Born from real evidence in JetBrains Marketplace reviews, not
